@@ -4,8 +4,6 @@ from functools import wraps
 
 logger.remove()
 
-logger.remove()
-
 logger.add(
     "meu_arquivo_de_logs.log",
     format="{time} {level} {message} {file}",

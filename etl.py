@@ -15,8 +15,8 @@ from utils_log import log_decorator
 #? Cada item de df_list é um DataFrame separado, um por arquivo
 #? Concatenando os arquivos (juntando) e reinicia do zero para nao repetir:
 
+@log_decorator
 def extrair_dados(pasta):  
-
     #!busca todos os arquivos que batem com esse padrão e retorna uma lista de caminhos:
     arquivos_json = glob.glob(os.path.join(pasta, "*.json"))
 
@@ -32,14 +32,14 @@ def extrair_dados(pasta):
 
 
 # Função que transforma:
-
+@log_decorator
 def transformar_dados(df: pd.DataFrame):
     df['Receita'] = df['Quantidade'] * df['Venda']
     return df
 
 
 # Função que da load em csv ou parquet:
-
+@log_decorator
 def carregar_dados(df, formatos: list):
     for formato in formatos:
         if formato == 'csv':

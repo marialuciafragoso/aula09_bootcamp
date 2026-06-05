@@ -1,0 +1,9 @@
+[project]
+name = "aula09"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Maria Lucia Fragoso", email = "marialuciafragoso007@gmail.com"}
+]
+requires-python = ">=3.11,<4.0"
+dependencies = ["loguru (>=0.7.3,<0.8.0)", "pyarrow (>=24.0.0,<25.0.0)"]
